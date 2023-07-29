@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        
+body , html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+.div {
+    width:85%;
+    border: solid 5px;
+    border-color: #633bec;
+    margin-left:7.5%;
+    margin-top:7.5%;
+border-radius: 15px;
+    position: fixed;
+    padding-bottom: 5px;
+}
+#pa {
+    margin-left:2%;
+    width:95%;
+    outline: none;
+    background:linear-gradient(to right , #633bec,blue);
+    margin-top:3%;
+    border-radius:5px;
+    font-size: 35px;
+    color: white;
+    border: none;
+    font-weight: 1000;
+    direction: rtl;
+}
+#result {
+    margin-left:2%;
+    width:95%;
+    height:50%;
+    direction: rtl;
+    outline: none;
+    background:linear-gradient(to right , #633bec,blue);
+    margin-top:2%;
+    border-radius:5px;
+    font-size: 25px;
+    color: white;
+    border: none;
+    font-weight: 1000;
+    padding: 4px;
+
+}
+#crs {
+    height: 30%;
+    display: flex;
+    width: 100%;
+    margin-top: 10%;
+}
+#clear {
+    height:100%;
+    background:linear-gradient(to right , #633bec,blue);
+    border: none;
+    border-radius: 10px;
+    flex: 2;
+    margin-left: 5px;
+    color: white;
+    font-size: 15px;
+    font-weight: 1000;
+    padding: 3%;
+}
+#ren {padding: 3%;
+    height:100%;
+    background:linear-gradient(to right , #633bec,blue);
+    border: none;
+    border-radius: 10px;
+    flex: 2;
+    margin-left:2%;
+    color: white;
+    font-size: 15px;
+    font-weight: 1000;
+}
+#theme {
+    height:100%;
+    background:linear-gradient(to right , #633bec,blue);
+  padding: 3%;  border: none;
+    border-radius: 10px;
+    flex: 2;
+    margin-left: 2%;
+    margin-right: 2%;
+    color: white;
+    font-size: 15px;
+    font-weight: 1000;
+    
+}
+.d1 {
+    height: 10%;
+    display: flex;
+    width: 100%;
+    margin-top: 5%;
+    margin-left:-1%;
+}
+.d1 button {
+    height:100%;
+ padding: 3%;   background:linear-gradient(to right , #633bec,blue);
+    border: none;
+    border-radius: 5px;
+    flex: 2;
+    margin-left: 2%;
+    color: white;
+    font-size: 15px;
+    font-weight: 1000;
+}
+#d2 {
+    height: 10%;
+    display: flex;
+    width: 100%;
+    margin-top: 5%;
+    margin-left:-1%;
+}
+#d2 button {
+    height:100%;
+ padding: 3%;   background:linear-gradient(to right , #633bec,blue);
+    border: none;
+    border-radius: 5px;
+    flex: 2;
+    margin-left: 2%;
+    color: white;
+    font-size: 15px;
+    font-weight: 1000;
+}
+#d3 {
+    height: 10%;
+    display: flex;
+    width: 100%;
+    margin-top: 5%;
+    margin-left:-1%;
+}
+#d3 button {
+    height:100%;
+    background:linear-gradient(to right , #633bec,blue);
+    border: none;
+ padding: 3%;   border-radius: 5px;
+    flex: 2;
+    margin-left: 2%;
+    color: white;
+    font-size: 15px;
+    font-weight: 1000;
+}
+#d3 {
+    height: 10%;
+    display: flex;
+    width: 100%;
+    margin-top: 5%;
+    margin-left:-1%;
+}
+#d3 button {
+    height:100%;
+    background:linear-gradient(to right , #633bec,blue);
+    border: none;
+    border-radius: 5px;
+    flex: 2;
+    margin-left: 2%;
+    color: white;
+    font-size: 15px;
+    font-weight: 1000;
+}
+
+@media only screen and (min-width: 750px) {
+  body {
+    padding-left: 50%;
+  }
+  .div {
+      width:30%;
+      font-size: 100px;
+  }
+  .d1 button , #d2 button , #clear , #ren ,#d3 button , #theme,#pa,#result{
+      font-size: 70px;
+  }
+}
+
+
+    </style>
+<script src="https://kit.fontawesome.com/d784d43fff.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+    <script src="code.js"></script>
+    <link rel="stylesheet" href="code.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+    
+</head>
+<body onclick="wor()">
+    
+    <div class="div" id="div" ><input id="pa" type="tel"><p id="result"></p><div id="crs"><button id="clear" onclick="cl()">C</button><button id="ren" onclick="pp()"><i class="fa-solid fa-delete-left"></i></button><button id="theme" onclick="bdo()">.</i></button></div><div class="d1"><button onclick="b0()">0</button><button onclick="b1()">1</button><button onclick="b2()">2</button><button onclick="badd()">+</button></div>
+    <div class="" id="d2"><button onclick="b3()">3</button><button onclick="b4()">4</button><button onclick="b5()">5</button><button onclick="bsub()">-</button></div><div id="d3">
+    <button onclick="b6()">6</button><button onclick="b7()">7</button><button onclick="b8()">8</button><button onclick="bstar()">x</button></div><div id="d3"><button onclick="b9()">9</button><button onclick="bbra()">()</button><button onclick="ans()">ans</button><button>÷</button></div></div>
+</body>
+<script>n = 1;
+function pp() {
+   pa = document.getElementById("pa")
+   pb = pa.value
+   pc = pb.length
+   pa.value = pb.substring(0,pc-1)
+  
+}
+
+function b1() {
+    document.getElementById("pa").value += "1"
+}
+function bdo() {
+    document.getElementById("pa").value += "."
+}
+function bdiv() {
+    document.getElementById("pa").value += "/"
+}
+function bsub() {
+    document.getElementById("pa").value += "-"
+}
+function badd() {
+    document.getElementById("pa").value += "+"
+}
+function b2() {
+    document.getElementById("pa").value += "2"
+}
+function b3() {
+    document.getElementById("pa").value += "3"
+}
+function b4() {
+    document.getElementById("pa").value += "4"
+}
+function b5() {
+    document.getElementById("pa").value += "5"
+}
+function b6() {
+    document.getElementById("pa").value += "6"
+}
+function b7() {
+    document.getElementById("pa").value += "7"
+}
+function b8() {
+    document.getElementById("pa").value += "8"
+}
+function b9() {
+    document.getElementById("pa").value += "9"
+}
+function b0() {
+    document.getElementById("pa").value += "0"
+}
+function bstar() {
+    document.getElementById("pa").value += "*"
+}
+function bbra() {
+    document.getElementById("pa").value += "()"
+}
+
+function wor() {
+    pa = document.getElementById("pa")
+    pb = pa.value
+    pc = pb.length - 1
+    p = pb[pc]
+        re = document.getElementById("result")
+        if (p === "1" || p === "2"|| p === "3"|| p === "4"|| p === "5"|| p === "6"|| p === "7"|| p === "8"|| p === "9"|| p === "0" || p === ")") {
+            re.innerHTML = eval(pb)
+        }
+}
+setInterval(wor , 1)
+function cl(){
+    document.getElementById("pa").value= ""
+}
+function ans() {
+    document.getElementById("pa").value += re.innerHTML
+}
+function ren() {
+    pa = document.getElementById("pa")
+    pb = pa.value
+    pc = pb.length - 1
+    pb = pb.substring(0,pc)
+}
+</script>
+</html>
